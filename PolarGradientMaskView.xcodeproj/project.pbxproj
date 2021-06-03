@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE568EC526699503006BB077 /* UIView+layerProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE568EC426699503006BB077 /* UIView+layerProperties.swift */; };
 		AEB084022669850500E360DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB084012669850500E360DC /* AppDelegate.swift */; };
 		AEB084042669850500E360DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB084032669850500E360DC /* SceneDelegate.swift */; };
 		AEB084062669850500E360DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB084052669850500E360DC /* ViewController.swift */; };
@@ -15,6 +16,7 @@
 		AEB0840E2669850900E360DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB0840C2669850900E360DC /* LaunchScreen.storyboard */; };
 		AEB084192669850900E360DC /* PolarGradientMaskViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB084182669850900E360DC /* PolarGradientMaskViewTests.swift */; };
 		AEB084242669850900E360DC /* PolarGradientMaskViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB084232669850900E360DC /* PolarGradientMaskViewUITests.swift */; };
+		AEB084352669852900E360DC /* PolarGradientMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB084342669852900E360DC /* PolarGradientMaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE568EC426699503006BB077 /* UIView+layerProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+layerProperties.swift"; sourceTree = "<group>"; };
 		AEB083FE2669850500E360DC /* PolarGradientMaskView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolarGradientMaskView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB084012669850500E360DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEB084032669850500E360DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		AEB0841F2669850900E360DC /* PolarGradientMaskViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolarGradientMaskViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB084232669850900E360DC /* PolarGradientMaskViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarGradientMaskViewUITests.swift; sourceTree = "<group>"; };
 		AEB084252669850900E360DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEB084342669852900E360DC /* PolarGradientMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarGradientMaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		AEB084002669850500E360DC /* PolarGradientMaskView */ = {
 			isa = PBXGroup;
 			children = (
+				AE568EC426699503006BB077 /* UIView+layerProperties.swift */,
 				AEB084012669850500E360DC /* AppDelegate.swift */,
 				AEB084032669850500E360DC /* SceneDelegate.swift */,
 				AEB084052669850500E360DC /* ViewController.swift */,
@@ -106,6 +111,7 @@
 				AEB0840A2669850900E360DC /* Assets.xcassets */,
 				AEB0840C2669850900E360DC /* LaunchScreen.storyboard */,
 				AEB0840F2669850900E360DC /* Info.plist */,
+				AEB084342669852900E360DC /* PolarGradientMaskView.swift */,
 			);
 			path = PolarGradientMaskView;
 			sourceTree = "<group>";
@@ -258,7 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE568EC526699503006BB077 /* UIView+layerProperties.swift in Sources */,
 				AEB084062669850500E360DC /* ViewController.swift in Sources */,
+				AEB084352669852900E360DC /* PolarGradientMaskView.swift in Sources */,
 				AEB084022669850500E360DC /* AppDelegate.swift in Sources */,
 				AEB084042669850500E360DC /* SceneDelegate.swift in Sources */,
 			);
