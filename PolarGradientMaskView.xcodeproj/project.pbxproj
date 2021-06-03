@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AEB084022669850500E360DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB084012669850500E360DC /* AppDelegate.swift */; };
+		AEB084042669850500E360DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB084032669850500E360DC /* SceneDelegate.swift */; };
+		AEB084062669850500E360DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB084052669850500E360DC /* ViewController.swift */; };
+		AEB084092669850500E360DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB084072669850500E360DC /* Main.storyboard */; };
+		AEB0840B2669850900E360DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB0840A2669850900E360DC /* Assets.xcassets */; };
+		AEB0840E2669850900E360DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB0840C2669850900E360DC /* LaunchScreen.storyboard */; };
+		AEB084192669850900E360DC /* PolarGradientMaskViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB084182669850900E360DC /* PolarGradientMaskViewTests.swift */; };
+		AEB084242669850900E360DC /* PolarGradientMaskViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB084232669850900E360DC /* PolarGradientMaskViewUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AEB084152669850900E360DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEB083F62669850400E360DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEB083FD2669850500E360DC;
+			remoteInfo = PolarGradientMaskView;
+		};
+		AEB084202669850900E360DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEB083F62669850400E360DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEB083FD2669850500E360DC;
+			remoteInfo = PolarGradientMaskView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AEB083FE2669850500E360DC /* PolarGradientMaskView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolarGradientMaskView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB084012669850500E360DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AEB084032669850500E360DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AEB084052669850500E360DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AEB084082669850500E360DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AEB0840A2669850900E360DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AEB0840D2669850900E360DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AEB0840F2669850900E360DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEB084142669850900E360DC /* PolarGradientMaskViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolarGradientMaskViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB084182669850900E360DC /* PolarGradientMaskViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarGradientMaskViewTests.swift; sourceTree = "<group>"; };
+		AEB0841A2669850900E360DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEB0841F2669850900E360DC /* PolarGradientMaskViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolarGradientMaskViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB084232669850900E360DC /* PolarGradientMaskViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarGradientMaskViewUITests.swift; sourceTree = "<group>"; };
+		AEB084252669850900E360DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEB083FB2669850500E360DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEB084112669850900E360DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEB0841C2669850900E360DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AEB083F52669850000E360DC = {
+			isa = PBXGroup;
+			children = (
+				AEB084002669850500E360DC /* PolarGradientMaskView */,
+				AEB084172669850900E360DC /* PolarGradientMaskViewTests */,
+				AEB084222669850900E360DC /* PolarGradientMaskViewUITests */,
+				AEB083FF2669850500E360DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AEB083FF2669850500E360DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEB083FE2669850500E360DC /* PolarGradientMaskView.app */,
+				AEB084142669850900E360DC /* PolarGradientMaskViewTests.xctest */,
+				AEB0841F2669850900E360DC /* PolarGradientMaskViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEB084002669850500E360DC /* PolarGradientMaskView */ = {
+			isa = PBXGroup;
+			children = (
+				AEB084012669850500E360DC /* AppDelegate.swift */,
+				AEB084032669850500E360DC /* SceneDelegate.swift */,
+				AEB084052669850500E360DC /* ViewController.swift */,
+				AEB084072669850500E360DC /* Main.storyboard */,
+				AEB0840A2669850900E360DC /* Assets.xcassets */,
+				AEB0840C2669850900E360DC /* LaunchScreen.storyboard */,
+				AEB0840F2669850900E360DC /* Info.plist */,
+			);
+			path = PolarGradientMaskView;
+			sourceTree = "<group>";
+		};
+		AEB084172669850900E360DC /* PolarGradientMaskViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				AEB084182669850900E360DC /* PolarGradientMaskViewTests.swift */,
+				AEB0841A2669850900E360DC /* Info.plist */,
+			);
+			path = PolarGradientMaskViewTests;
+			sourceTree = "<group>";
+		};
+		AEB084222669850900E360DC /* PolarGradientMaskViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AEB084232669850900E360DC /* PolarGradientMaskViewUITests.swift */,
+				AEB084252669850900E360DC /* Info.plist */,
+			);
+			path = PolarGradientMaskViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEB083FD2669850500E360DC /* PolarGradientMaskView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEB084282669850900E360DC /* Build configuration list for PBXNativeTarget "PolarGradientMaskView" */;
+			buildPhases = (
+				AEB083FA2669850500E360DC /* Sources */,
+				AEB083FB2669850500E360DC /* Frameworks */,
+				AEB083FC2669850500E360DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PolarGradientMaskView;
+			productName = PolarGradientMaskView;
+			productReference = AEB083FE2669850500E360DC /* PolarGradientMaskView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AEB084132669850900E360DC /* PolarGradientMaskViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEB0842B2669850900E360DC /* Build configuration list for PBXNativeTarget "PolarGradientMaskViewTests" */;
+			buildPhases = (
+				AEB084102669850900E360DC /* Sources */,
+				AEB084112669850900E360DC /* Frameworks */,
+				AEB084122669850900E360DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEB084162669850900E360DC /* PBXTargetDependency */,
+			);
+			name = PolarGradientMaskViewTests;
+			productName = PolarGradientMaskViewTests;
+			productReference = AEB084142669850900E360DC /* PolarGradientMaskViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AEB0841E2669850900E360DC /* PolarGradientMaskViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEB0842E2669850900E360DC /* Build configuration list for PBXNativeTarget "PolarGradientMaskViewUITests" */;
+			buildPhases = (
+				AEB0841B2669850900E360DC /* Sources */,
+				AEB0841C2669850900E360DC /* Frameworks */,
+				AEB0841D2669850900E360DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEB084212669850900E360DC /* PBXTargetDependency */,
+			);
+			name = PolarGradientMaskViewUITests;
+			productName = PolarGradientMaskViewUITests;
+			productReference = AEB0841F2669850900E360DC /* PolarGradientMaskViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEB083F62669850400E360DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					AEB083FD2669850500E360DC = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					AEB084132669850900E360DC = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = AEB083FD2669850500E360DC;
+					};
+					AEB0841E2669850900E360DC = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = AEB083FD2669850500E360DC;
+					};
+				};
+			};
+			buildConfigurationList = AEB083F92669850400E360DC /* Build configuration list for PBXProject "PolarGradientMaskView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AEB083F52669850000E360DC;
+			productRefGroup = AEB083FF2669850500E360DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEB083FD2669850500E360DC /* PolarGradientMaskView */,
+				AEB084132669850900E360DC /* PolarGradientMaskViewTests */,
+				AEB0841E2669850900E360DC /* PolarGradientMaskViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEB083FC2669850500E360DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEB0840E2669850900E360DC /* LaunchScreen.storyboard in Resources */,
+				AEB0840B2669850900E360DC /* Assets.xcassets in Resources */,
+				AEB084092669850500E360DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEB084122669850900E360DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEB0841D2669850900E360DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEB083FA2669850500E360DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEB084062669850500E360DC /* ViewController.swift in Sources */,
+				AEB084022669850500E360DC /* AppDelegate.swift in Sources */,
+				AEB084042669850500E360DC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEB084102669850900E360DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEB084192669850900E360DC /* PolarGradientMaskViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEB0841B2669850900E360DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEB084242669850900E360DC /* PolarGradientMaskViewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEB084162669850900E360DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEB083FD2669850500E360DC /* PolarGradientMaskView */;
+			targetProxy = AEB084152669850900E360DC /* PBXContainerItemProxy */;
+		};
+		AEB084212669850900E360DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEB083FD2669850500E360DC /* PolarGradientMaskView */;
+			targetProxy = AEB084202669850900E360DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AEB084072669850500E360DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEB084082669850500E360DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AEB0840C2669850900E360DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEB0840D2669850900E360DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AEB084262669850900E360DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AEB084272669850900E360DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEB084292669850900E360DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PolarGradientMaskView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wareto.PolarGradientMaskView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AEB0842A2669850900E360DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PolarGradientMaskView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wareto.PolarGradientMaskView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AEB0842C2669850900E360DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PolarGradientMaskViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wareto.PolarGradientMaskViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PolarGradientMaskView.app/PolarGradientMaskView";
+			};
+			name = Debug;
+		};
+		AEB0842D2669850900E360DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PolarGradientMaskViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wareto.PolarGradientMaskViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PolarGradientMaskView.app/PolarGradientMaskView";
+			};
+			name = Release;
+		};
+		AEB0842F2669850900E360DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PolarGradientMaskViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wareto.PolarGradientMaskViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PolarGradientMaskView;
+			};
+			name = Debug;
+		};
+		AEB084302669850900E360DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PolarGradientMaskViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wareto.PolarGradientMaskViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PolarGradientMaskView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEB083F92669850400E360DC /* Build configuration list for PBXProject "PolarGradientMaskView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEB084262669850900E360DC /* Debug */,
+				AEB084272669850900E360DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEB084282669850900E360DC /* Build configuration list for PBXNativeTarget "PolarGradientMaskView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEB084292669850900E360DC /* Debug */,
+				AEB0842A2669850900E360DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEB0842B2669850900E360DC /* Build configuration list for PBXNativeTarget "PolarGradientMaskViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEB0842C2669850900E360DC /* Debug */,
+				AEB0842D2669850900E360DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEB0842E2669850900E360DC /* Build configuration list for PBXNativeTarget "PolarGradientMaskViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEB0842F2669850900E360DC /* Debug */,
+				AEB084302669850900E360DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEB083F62669850400E360DC /* Project object */;
+}
