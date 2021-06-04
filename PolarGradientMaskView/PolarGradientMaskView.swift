@@ -178,7 +178,7 @@ class PolarGradientMaskView: UIView {
         if animating && animationStepsRemaining > 0 {
             animateGradientRotationStep()
         } else {
-            shapeLayer.opacity = 0
+//            shapeLayer.opacity = 0
         }
     }
 
