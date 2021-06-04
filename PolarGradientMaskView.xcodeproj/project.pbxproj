@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AE568EC526699503006BB077 /* UIView+layerProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE568EC426699503006BB077 /* UIView+layerProperties.swift */; };
+		AE568ECA266ACC83006BB077 /* UIImage+imageFromLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE568EC9266ACC82006BB077 /* UIImage+imageFromLayer.swift */; };
 		AEB084022669850500E360DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB084012669850500E360DC /* AppDelegate.swift */; };
 		AEB084042669850500E360DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB084032669850500E360DC /* SceneDelegate.swift */; };
 		AEB084062669850500E360DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB084052669850500E360DC /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		AE568EC426699503006BB077 /* UIView+layerProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+layerProperties.swift"; sourceTree = "<group>"; };
+		AE568EC9266ACC82006BB077 /* UIImage+imageFromLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+imageFromLayer.swift"; sourceTree = "<group>"; };
 		AEB083FE2669850500E360DC /* PolarGradientMaskView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolarGradientMaskView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB084012669850500E360DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEB084032669850500E360DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				AE568EC426699503006BB077 /* UIView+layerProperties.swift */,
+				AE568EC9266ACC82006BB077 /* UIImage+imageFromLayer.swift */,
 				AEB084012669850500E360DC /* AppDelegate.swift */,
 				AEB084032669850500E360DC /* SceneDelegate.swift */,
 				AEB084052669850500E360DC /* ViewController.swift */,
@@ -269,6 +272,7 @@
 				AEB084352669852900E360DC /* PolarGradientMaskView.swift in Sources */,
 				AEB084022669850500E360DC /* AppDelegate.swift in Sources */,
 				AEB084042669850500E360DC /* SceneDelegate.swift in Sources */,
+				AE568ECA266ACC83006BB077 /* UIImage+imageFromLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

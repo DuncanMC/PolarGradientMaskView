@@ -28,7 +28,7 @@ class PolarGradientMaskView: UIView {
             }
         }
     }
-
+    var saveGradientImage = false // Set to true to write the gradient image to the app's documents directory and log the path to the console.
     var oldFrame: CGRect?
     var rotationAngle: CGFloat = 0
     var gradientLayer = CAGradientLayer()
@@ -44,8 +44,23 @@ class PolarGradientMaskView: UIView {
                 shapeLayer.frame = bounds
                 let shapeRect = bounds.insetBy(dx: bounds.width / 8, dy: bounds.height / 8)
                 shapeLayer.path = buildShapePathIn(shapeRect)
+                if saveGradientImage {
+                    if let image = UIImage.image(from: gradientLayer) {
+                        let data = image.pngData()
+                        let imageURL = getDocumentsDirectory().appendingPathComponent("ConicalGradient.png")
+                        print("Saving gradient image to \(imageURL.path)")
+                        try? data?.write(to: imageURL)
+                    }
+                }
+
             }
         }
+    }
+
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
     }
 
     func buildShapePathIn(_ rect: CGRect) -> CGPath {
@@ -96,8 +111,8 @@ class PolarGradientMaskView: UIView {
         gradientLayer.type = .conic
         gradientLayer.colors = [UIColor.clear.cgColor,
                                 UIColor.clear.cgColor,
-                                UIColor.white.cgColor,
-                                UIColor.white.cgColor]
+                                UIColor.blue.cgColor,
+                                UIColor.blue.cgColor]
         let center = CGPoint(x: 0.5, y: 0.5)
         gradientLayer.locations = [0, 0.3, 0.7, 0.9]
         gradientLayer.startPoint = center
