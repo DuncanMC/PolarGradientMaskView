@@ -30,7 +30,6 @@ class PolarGradientMaskView: UIView {
     }
 
     var oldFrame: CGRect?
-    var animationStep = 0
     var rotationAngle: CGFloat = 0
     var gradientLayer = CAGradientLayer()
     var shapeLayer = CAShapeLayer()
@@ -118,8 +117,8 @@ class PolarGradientMaskView: UIView {
     }
 
     public func doRotationAnimation() {
-        animationStep = 0
         animationStepsRemaining = animateForever ? Int.max :  4
+        shapeLayer.opacity = 1.0
         if !animateForever {
             rotationAngle = 0
             CATransaction.begin()
@@ -130,9 +129,10 @@ class PolarGradientMaskView: UIView {
         animateGradientRotationStep()
     }
 
+    #if false
+    // This version of the function uses a CABasicAnimation
     private func animateGradientRotationStep() {
         let rotation = CABasicAnimation(keyPath: "transform.rotation.z")
-        animationStep += 1
         animationStepsRemaining -= 1
         rotation.fromValue =  rotationAngle
         rotationAngle += CGFloat.pi / 2
@@ -140,21 +140,53 @@ class PolarGradientMaskView: UIView {
         rotation.duration = 0.5
         rotation.delegate = self
         gradientLayer.add(rotation, forKey: nil)
+
+        // After a tiny delay, set the layer's transform to the state at the end of the animation
+        // so it doesnt jump back once the animation is complete.
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+
+            // You have to wrap this step in a CATransaction with setDisableActions(true)
+            // So you don't get an implicit animation
             CATransaction.begin()
             CATransaction.setDisableActions(true)
             self.gradientLayer.transform = CATransform3DMakeRotation(self.rotationAngle, 0, 0, 1)
             CATransaction.commit()
         }
     }
+    #else
+    // This version of the function takes advantage of the fact
+    // that a layer's transform property is implicitly animated
+    private func animateGradientRotationStep() {
+        animationStepsRemaining -= 1
+        rotationAngle += CGFloat.pi / 2
+        // MARK: - CATransaction begin
+        // Use a CATransaction to set the animation duration, timing function, and completion block
+        CATransaction.begin()
+        CATransaction.setAnimationDuration(0.5)
+        CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: .linear))
+        CATransaction.setCompletionBlock {
+            self.animationDidStop(finished:true)
+        }
+        self.gradientLayer.transform = CATransform3DMakeRotation(self.rotationAngle, 0, 0, 1)
+        CATransaction.commit()
+        // MARK: CATransaction end -
+    }
+    #endif
+
+    func animationDidStop(finished flag: Bool) {
+        delegate?.animationStepComplete(animationStepsRemaining)
+        if animating && animationStepsRemaining > 0 {
+            animateGradientRotationStep()
+        } else {
+            shapeLayer.opacity = 0
+        }
+    }
+
 }
 
 extension PolarGradientMaskView: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation,
                           finished flag: Bool) {
-        delegate?.animationStepComplete(animationStepsRemaining)
-        if animating && animationStepsRemaining > 0{
-            animateGradientRotationStep()
-        }
+        animationDidStop(finished: flag)
     }
 }
