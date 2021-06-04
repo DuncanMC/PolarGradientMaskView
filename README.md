@@ -12,6 +12,8 @@ The gadient layer looks like this:
 
 (Rendered in blue against a gray checkerboard background so you can see the transition from opaque to clear.)
 
+The opaque (blue) parts of the gradient cause the shape layer to be visible. The transparent parts of the gradient hide (mask) those parts of the shape layer, and partly transparent parts of the gradient layer make those parts of the shape layer partly transparent.
+
 The animation simply rotates the gradient layer on the Z axis around the center of the layer. It rotatest the layer 1/4 turn at a time, and each time an animation step completes, it simply creates a new animation that rotates the mask another 1/4 turn.
 
 The app's window looks like this:
