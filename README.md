@@ -1,4 +1,4 @@
-##PolarGradientMaskView
+## PolarGradientMaskView
 
 This project illustrates how to use a "conic" gradient to mask a view and create a circular animation that looks like this:
 
