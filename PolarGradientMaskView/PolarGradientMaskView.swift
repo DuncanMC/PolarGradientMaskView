@@ -31,23 +31,28 @@ class PolarGradientMaskView: UIView {
     var saveGradientImage = false // Set to true to write the gradient image to the app's documents directory and log the path to the console.
     var oldFrame: CGRect?
     var rotationAngle: CGFloat = 0
-    var gradientLayer = CAGradientLayer()
     var shapeLayer = CAShapeLayer()
-    let lineWidth: CGFloat = 15
+    var gradientLayer = CAGradientLayer()
+    var highlightShapeLayer = CAShapeLayer()
+    var highlightGradientLayer = CAGradientLayer()
+    let lineWidth: CGFloat = 20
 
 
 
     override var bounds: CGRect {
         didSet {
             if bounds != oldFrame {
-                gradientLayer.frame = bounds
                 shapeLayer.frame = bounds
+                gradientLayer.frame = bounds
+                highlightShapeLayer.frame = bounds
+                highlightGradientLayer.frame = bounds
                 let shapeRect = bounds.insetBy(dx: bounds.width / 8, dy: bounds.height / 8)
                 shapeLayer.path = buildShapePathIn(shapeRect)
+                highlightShapeLayer.path = buildShapePathIn(shapeRect)
                 if saveGradientImage {
-                    if let image = UIImage.image(from: gradientLayer) {
+                    if let image = UIImage.image(from: highlightGradientLayer) {
                         let data = image.pngData()
-                        let imageURL = getDocumentsDirectory().appendingPathComponent("ConicalGradient.png")
+                        let imageURL = getDocumentsDirectory().appendingPathComponent("highlightConicalGradient.png")
                         print("Saving gradient image to \(imageURL.path)")
                         try? data?.write(to: imageURL)
                     }
@@ -108,6 +113,10 @@ class PolarGradientMaskView: UIView {
         shapeLayer.strokeColor = UIColor.yellow.cgColor
         shapeLayer.lineWidth =  lineWidth
         shapeLayer.fillColor = nil
+        highlightShapeLayer.strokeColor = UIColor.white.cgColor
+        highlightShapeLayer.lineWidth =  lineWidth - 4
+        highlightShapeLayer.fillColor = nil
+
         gradientLayer.type = .conic
         gradientLayer.colors = [UIColor.clear.cgColor,
                                 UIColor.clear.cgColor,
@@ -119,6 +128,18 @@ class PolarGradientMaskView: UIView {
         gradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
         self.layer.addSublayer(shapeLayer)
         shapeLayer.mask = gradientLayer
+        //---
+        highlightGradientLayer.type = .conic
+        highlightGradientLayer.colors = [UIColor.clear.cgColor,
+                                         UIColor.clear.cgColor,
+                                         UIColor(red: 0, green: 0, blue: 1, alpha: 0.5).cgColor,
+                                         UIColor(red: 0, green: 0, blue: 1, alpha: 0.9).cgColor,
+                                ]
+        highlightGradientLayer.locations = [0.00, 0.85, 0.90, 1.00]
+        highlightGradientLayer.startPoint = center
+        highlightGradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
+        self.layer.addSublayer(highlightShapeLayer)
+        highlightShapeLayer.mask = highlightGradientLayer
     }
 
     override init(frame: CGRect) {
@@ -139,6 +160,7 @@ class PolarGradientMaskView: UIView {
             CATransaction.begin()
             CATransaction.setDisableActions(true)
             self.gradientLayer.transform = CATransform3DMakeRotation(self.rotationAngle, 0, 0, 1)
+            self.highlightGradientLayer.transform = CATransform3DMakeRotation(self.rotationAngle, 0, 0, 1)
             CATransaction.commit()
         }
         animateGradientRotationStep()
@@ -182,7 +204,9 @@ class PolarGradientMaskView: UIView {
         CATransaction.setCompletionBlock {
             self.animationDidStop(finished:true)
         }
-        self.gradientLayer.transform = CATransform3DMakeRotation(self.rotationAngle, 0, 0, 1)
+        let newRotation = CATransform3DMakeRotation(self.rotationAngle, 0, 0, 1)
+        self.gradientLayer.transform = newRotation
+        self.highlightGradientLayer.transform = newRotation
         CATransaction.commit()
         // MARK: CATransaction end -
     }
