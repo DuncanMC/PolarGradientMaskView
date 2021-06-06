@@ -166,19 +166,29 @@ class PolarGradientMaskView: UIView {
         animateGradientRotationStep()
     }
 
-    #if false
-    // This version of the function uses a CABasicAnimation
+    #if true
+    // This version of the function uses 2 CABasicAnimations
     private func animateGradientRotationStep() {
-        let rotation = CABasicAnimation(keyPath: "transform.rotation.z")
-        animationStepsRemaining -= 1
-        rotation.fromValue =  rotationAngle
-        rotationAngle += CGFloat.pi / 2
-        rotation.toValue =  rotationAngle
-        rotation.duration = 0.5
-        rotation.delegate = self
-        gradientLayer.add(rotation, forKey: nil)
 
-        // After a tiny delay, set the layer's transform to the state at the end of the animation
+        // First create animation for the primary hexagon shape layer
+        let rotation1 = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotation1.fromValue =  rotationAngle
+        rotation1.toValue =  rotationAngle + CGFloat.pi / 2
+        rotation1.duration = 0.5
+        rotation1.delegate = self
+        gradientLayer.add(rotation1, forKey: nil)
+
+        // Now create an identical animatoin for the highlight gradient layer
+        let rotation2 = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotation2.fromValue =  rotationAngle
+        rotation2.toValue =  rotationAngle + CGFloat.pi / 2
+        rotation2.duration = 0.5
+        highlightGradientLayer.add(rotation2, forKey: nil)
+
+        animationStepsRemaining -= 1
+        rotationAngle += CGFloat.pi / 2
+
+        // After a tiny delay, set the two layers' transforms to the state at the end of the animation
         // so it doesnt jump back once the animation is complete.
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
 
@@ -186,7 +196,9 @@ class PolarGradientMaskView: UIView {
             // So you don't get an implicit animation
             CATransaction.begin()
             CATransaction.setDisableActions(true)
-            self.gradientLayer.transform = CATransform3DMakeRotation(self.rotationAngle, 0, 0, 1)
+            let newRotation = CATransform3DMakeRotation(self.rotationAngle, 0, 0, 1)
+            self.gradientLayer.transform = newRotation
+            self.highlightGradientLayer.transform = newRotation
             CATransaction.commit()
         }
     }
