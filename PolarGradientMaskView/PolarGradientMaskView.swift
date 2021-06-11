@@ -132,8 +132,8 @@ class PolarGradientMaskView: UIView {
         highlightGradientLayer.type = .conic
         highlightGradientLayer.colors = [UIColor.clear.cgColor,
                                          UIColor.clear.cgColor,
-                                         UIColor(red: 0, green: 0, blue: 1, alpha: 0.5).cgColor,
-                                         UIColor(red: 0, green: 0, blue: 1, alpha: 0.9).cgColor,
+                                         UIColor.blue.withAlphaComponent(0.5).cgColor,
+                                         UIColor.blue.withAlphaComponent(0.9).cgColor,
                                 ]
         highlightGradientLayer.locations = [0.00, 0.85, 0.90, 1.00]
         highlightGradientLayer.startPoint = center
